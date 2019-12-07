@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
     private Button oneHour;
     private Button oneThirtyHours;
     private Button twoHours;
-    private Button acheive;
+    private Button achieve;
+    private int timerStatus;
 
 
     @Override
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         thirtyMin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                timerStatus = 0;
                 newFile();
             }
         });
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         fortyFiveMin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                timerStatus = 1;
                 newFile();
             }
         });
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         oneHour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                timerStatus = 2;
                 newFile();
             }
         });
@@ -48,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         oneThirtyHours.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                timerStatus = 3;
                 newFile();
             }
         });
@@ -56,16 +61,22 @@ public class MainActivity extends AppCompatActivity {
         twoHours.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                timerStatus = 4;
                 newFile();
             }
         });
-        acheive = findViewById(R.id.dataButton);
-        acheive.setOnClickListener(new View.OnClickListener() {
+
+        achieve = findViewById(R.id.dataButton);
+        achieve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 newFileTwo();
             }
         });
+    }
+
+    public int getStatus() {
+        return timerStatus;
     }
 
     public void newFile() {

@@ -38,7 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="268dp"
             android:layout_weight="1"
-            android:text="@string/time_display" />
+            android:text="@string/time_display"
+            android:textSize="64sp" />
 
         <Button
             android:id="@+id/quitButton"
