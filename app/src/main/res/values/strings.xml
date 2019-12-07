@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">FocusApplicationFinal</string>
+    <string name="focus_with">Focus with</string>
+    <string name="geoff">Geoff</string>
+    <string name="_30_minutes">30 minutes</string>
+    <string name="_45_minutes">45 minutes</string>
+    <string name="_1_hour">1 hour</string>
+    <string name="_1_hour_30_minutes">1 hour 30 minutes</string>
+    <string name="_2_hours">2 hours</string>
+    <string name="your_acheivements">Your Acheivements</string>
+    <string name="start_focusing_for">Start Focusing for:</string>
+    <string name="focus">Focus with</string>
+    <string name="geof">Geoff</string>
+    <string name="time_display">Time display</string>
+    <string name="quit_focusing">Quit Focusing</string>
+    <string name="focustwo">focus</string>
+    <string name="timer">Timer</string>
+    <string name="quitbutton">QuitButton</string>
+    <string name="quit_focusingtwo">Quit Focusing</string>
+    <string name="points">Points:</string>
+    <string name="geoffpic">geoff</string>
+    <string name="picg">picg</string>
+    <string name="pictwo">pictwo</string>
+    <string name="picthree">picthree</string>
+    <string name="picfour">picfour</string>
+    <string name="page_button">Page Button</string>
+    <string name="main_page">Main Page</string>
+</resources>
