@@ -25,4 +25,15 @@
     <string name="picfour">picfour</string>
     <string name="page_button">Page Button</string>
     <string name="main_page">Main Page</string>
+    <string name="prize">Prize:</string>
+    <string name="todoone">TODO</string>
+    <string name="todotwo">TODO</string>
+    <string name="todothree">TODO</string>
+    <string name="todofour">TODO</string>
+    <string name="todofive">TODO</string>
+    <string name="geoffimg">geoffimg</string>
+    <string name="chuchuimg">chuchuimg</string>
+    <string name="csimg">csimg</string>
+    <string name="benimg">benimg</string>
+    <string name="xyzimg">xyzimg</string>
 </resources>

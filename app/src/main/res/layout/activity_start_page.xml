@@ -27,19 +27,77 @@
             android:lineSpacingExtra="18sp"
             android:text="@string/timer"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#2C7CBE"
             android:textSize="45sp"
             android:textStyle="bold"
             android:typeface="serif"
+            android:visibility="visible"
             app:fontFamily="sans-serif-smallcaps" />
+
+        <ImageView
+            android:id="@+id/xyzimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/xyzimg"
+            android:visibility="gone"
+            app:srcCompat="@drawable/xyz" />
+
+        <ImageView
+            android:id="@+id/chuchuimage"
+            android:layout_width="match_parent"
+            android:layout_height="471dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/chuchuimg"
+            android:visibility="gone"
+            app:srcCompat="@drawable/chuchu" />
+
+        <ImageView
+            android:id="@+id/benimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/benimg"
+            android:visibility="visible"
+            app:srcCompat="@drawable/bennordick" />
+
+        <ImageView
+            android:id="@+id/geoffimage"
+            android:layout_width="match_parent"
+            android:layout_height="276dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/geoffimg"
+            android:visibility="gone"
+            app:srcCompat="@drawable/geoff" />
+
+        <ImageView
+            android:id="@+id/csimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/csimg"
+            android:visibility="gone"
+            app:srcCompat="@drawable/csbadge" />
 
         <TextView
             android:id="@+id/txt"
             android:layout_width="match_parent"
             android:layout_height="268dp"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="@string/time_display"
-            android:textSize="64sp" />
+            android:textSize="64sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/prizelabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/prize"
+            android:textSize="42sp"
+            android:gravity="center"
+            android:visibility="visible" />
 
         <Button
             android:id="@+id/quitButton"
