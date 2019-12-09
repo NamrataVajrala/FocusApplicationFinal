@@ -78,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
     public int getStatus() {
         return timerStatus;
     }
+    public void setStatus(int t) {
+        timerStatus = t;
+    }
+
 
     public void newFile() {
         Intent intent = new Intent(MainActivity.this, StartPage.class);
