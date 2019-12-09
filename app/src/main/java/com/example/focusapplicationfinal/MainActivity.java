@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,17 +16,22 @@ public class MainActivity extends AppCompatActivity {
     private Button twoHours;
     private Button achieve;
     private int timerStatus;
+    private Intent mainIntent;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mainIntent = new Intent(MainActivity.this, StartPage.class);
+
         setContentView(R.layout.activity_main);
         thirtyMin = findViewById(R.id.thirtybutton);
         thirtyMin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 timerStatus = 0;
+                mainIntent.putExtra("timer", timerStatus);
                 newFile();
             }
         });
@@ -35,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 timerStatus = 1;
+                mainIntent.putExtra("timer", timerStatus);
                 newFile();
             }
         });
@@ -44,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 timerStatus = 2;
+                mainIntent.putExtra("timer", timerStatus);
                 newFile();
             }
         });
@@ -53,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 timerStatus = 3;
+                mainIntent.putExtra("timer", timerStatus);
                 newFile();
             }
         });
@@ -62,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 timerStatus = 4;
+                mainIntent.putExtra("timer", timerStatus);
                 newFile();
             }
         });
@@ -78,14 +88,9 @@ public class MainActivity extends AppCompatActivity {
     public int getStatus() {
         return timerStatus;
     }
-    public void setStatus(int t) {
-        timerStatus = t;
-    }
-
 
     public void newFile() {
-        Intent intent = new Intent(MainActivity.this, StartPage.class);
-        startActivity(intent);
+        startActivity(mainIntent);
         finish();
     }
     public void newFileTwo() {

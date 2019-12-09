@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.CountDownTimer;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -27,12 +28,14 @@ public class StartPage extends MainActivity {
     private int chuchuscore;
     private int xyzscore;
     private int csscore;
+    private int chosenTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_page);
-
+        Intent passed = getIntent();
+        chosenTime = passed.getIntExtra("timer", 0);
         quitFocus = findViewById(R.id.quitButton);
         quitFocus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +60,10 @@ public class StartPage extends MainActivity {
         prizeLabel.setVisibility(View.GONE);
         text.setVisibility(View.VISIBLE);
 
-        switch (getStatus()) {
+
+        //Log.d("mytag", "timer status " + Integer.toString(chosenTime));
+
+        switch (chosenTime) {
             default:
                 break;
             case 0:
