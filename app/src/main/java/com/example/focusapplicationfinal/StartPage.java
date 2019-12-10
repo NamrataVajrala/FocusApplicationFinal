@@ -63,7 +63,7 @@ public class StartPage extends MainActivity {
                 break;
             case 0:
                 System.out.println("erhkwljerh0");
-                totalTime = 30000;
+                totalTime = 1800000;
                 break;
             case 1:
                 System.out.println("fnfdkjfi1");
