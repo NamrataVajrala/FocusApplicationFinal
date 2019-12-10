@@ -24,12 +24,13 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/achievment"
+                android:id="@+id/prizes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ACHIEVEMENTS"
-                android:textSize="42sp" />
+                android:gravity="center"
+                android:text="Prizes You Can Get:"
+                android:textSize="40sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -48,11 +49,12 @@
 
             <TextView
                 android:id="@+id/csCount"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="30 minutes: CS 125 Badge"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -72,11 +74,12 @@
 
             <TextView
                 android:id="@+id/catCount"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="45 minutes: Xyx Cat"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -96,17 +99,17 @@
 
             <TextView
                 android:id="@+id/DogCount"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="An Hour: Chuchu Dog"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="210dp"
             android:layout_weight="1"
             android:orientation="horizontal">
 
@@ -120,11 +123,12 @@
 
             <TextView
                 android:id="@+id/benCount"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="An Hour Thirty Minutes: Ben's Praise"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -144,11 +148,12 @@
 
             <TextView
                 android:id="@+id/geoffCount"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="Two Hours: Geoff's Big Smile"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
