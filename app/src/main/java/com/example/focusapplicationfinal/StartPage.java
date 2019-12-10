@@ -23,11 +23,6 @@ public class StartPage extends MainActivity {
     private ImageView xyzim;
     private ImageView csim;
     private TextView prizeLabel;
-    private int geoffscore;
-    private int benscore;
-    private int chuchuscore;
-    private int xyzscore;
-    private int csscore;
     private int chosenTime;
 
     @Override
@@ -108,35 +103,30 @@ public class StartPage extends MainActivity {
                         csim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: CS Badge!");
-                        csscore++;
                         break;
                     case 1:
                         text.setVisibility(View.GONE);
                         xyzim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: XYZ Cat Badge!");
-                        xyzscore++;
                         break;
                     case 2:
                         text.setVisibility(View.GONE);
                         chuchuim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: Chuchu Dog Badge!");
-                        chuchuscore++;
                         break;
                     case 3:
                         text.setVisibility(View.GONE);
                         benim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: Ben Head Badge!");
-                        benscore++;
                         break;
                     case 4:
                         text.setVisibility(View.GONE);
                         geoffim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: Geoff Head Badge!");
-                        geoffscore++;
                         break;
                 }
             }
@@ -148,25 +138,5 @@ public class StartPage extends MainActivity {
         Intent intent = new Intent(StartPage.this, MainActivity.class);
         startActivity(intent);
         finish();
-    }
-
-    public int getGeoffscore() {
-        return geoffscore;
-    }
-
-    public int getBenscore() {
-        return benscore;
-    }
-
-    public int getChuchuscore() {
-        return chuchuscore;
-    }
-
-    public int getXyzscore() {
-        return xyzscore;
-    }
-
-    public int getCsscore() {
-        return csscore;
     }
 }
