@@ -9,9 +9,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class StartPage extends MainActivity {
+public class StartPage extends AppCompatActivity {
 
     private Button quitFocus;
     private long totalTime;
@@ -29,13 +30,31 @@ public class StartPage extends MainActivity {
     private int xyzscore;
     private int csscore;
     private int chosenTime;
+    private Intent dataIntent;
+    private ImageView csp;
+    private ImageView xyzp;
+    private ImageView chuchup;
+    private ImageView benp;
+    private ImageView geoffp;
+    private int[] arr;
+
+//    private Button quitButton;
+//    private TextView csnum;
+//    private TextView catnum;
+//    private TextView dognum;
+//    private TextView bennum;
+//    private TextView geoffnum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_page);
+
         Intent passed = getIntent();
         chosenTime = passed.getIntExtra("timer", 0);
+
+        arr = passed.getIntArrayExtra("array");
+
         quitFocus = findViewById(R.id.quitButton);
         quitFocus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +62,13 @@ public class StartPage extends MainActivity {
                 newFile();
             }
         });
+        dataIntent = new Intent(this, MainActivity.class);
+
+        geoffp = findViewById(R.id.geoffpic);
+        benp = findViewById(R.id.benpic);
+        chuchup = findViewById(R.id.dogpic);
+        xyzp = findViewById(R.id.catpic);
+        csp = findViewById(R.id.cspic);
 
         text = findViewById(R.id.txt);
         geoffim = findViewById(R.id.geoffimage);
@@ -60,6 +86,11 @@ public class StartPage extends MainActivity {
         prizeLabel.setVisibility(View.GONE);
         text.setVisibility(View.VISIBLE);
 
+//        csnum = findViewById(R.id.csCount);
+//        catnum = findViewById(R.id.catCount);
+//        dognum = findViewById(R.id.dogCount);
+//        bennum = findViewById(R.id.benCount);
+//        geoffnum = findViewById(R.id.geoffCount);
 
         //Log.d("mytag", "timer status " + Integer.toString(chosenTime));
 
@@ -68,19 +99,24 @@ public class StartPage extends MainActivity {
                 break;
             case 0:
                 System.out.println("erhkwljerh0");
-                totalTime = 30000;
+                //totalTime = 30000;
+                totalTime = 1800000;
                 break;
             case 1:
                 System.out.println("fnfdkjfi1");
+                //totalTime = 15000;
                 totalTime = 2700000;
                 break;
             case 2:
+                //totalTime = 3600000;
                 totalTime = 3600000;
                 break;
             case 3:
+                //totalTime = 5400000;
                 totalTime = 5400000;
                 break;
             case 4:
+                //totalTime = 7200000;
                 totalTime = 7200000;
                 break;
         }
@@ -95,12 +131,15 @@ public class StartPage extends MainActivity {
                 long seconds = (millisUntilFinished / 1000) % 60;
                 String remaining = minutes + ":" + seconds;
                 text.setText(remaining);
+                //dataIntent.putExtra("csscore", 21);
+                //System.out.println("updated");
             }
 
             public void onFinish() {
                 text.setText("You're done!");
                 timer.cancel();
-                switch (getStatus()) {
+
+                switch (chosenTime) {
                     default:
                         break;
                     case 0:
@@ -108,35 +147,53 @@ public class StartPage extends MainActivity {
                         csim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: CS Badge!");
-                        csscore++;
+                        //csp.setVisibility(View.GONE);
+                        arr[0]++;
+                        //dataIntent.putExtra("csscore", 1);
                         break;
                     case 1:
                         text.setVisibility(View.GONE);
                         xyzim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: XYZ Cat Badge!");
-                        xyzscore++;
+                        arr[1]++;
+                        //xyzp.setVisibility(View.GONE);
+                        //dataIntent.putExtra("xyzscore", 1);
+                        //xyzscore++;
+                        //catnum.setText(csscore++);
                         break;
                     case 2:
                         text.setVisibility(View.GONE);
                         chuchuim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: Chuchu Dog Badge!");
-                        chuchuscore++;
+                        arr[2]++;
+                        //chuchup.setVisibility(View.GONE);
+                        //dataIntent.putExtra("chuchuscore", 1);
+                        //chuchuscore++;
+                        //dognum.setText(chuchuscore++);
                         break;
                     case 3:
                         text.setVisibility(View.GONE);
                         benim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: Ben Head Badge!");
-                        benscore++;
+                        arr[3]++;
+                        //benp.setVisibility(View.GONE);
+                        //dataIntent.putExtra("benscore", 1);
+                        //benscore++;
+                        //bennum.setText(benscore++);
                         break;
                     case 4:
                         text.setVisibility(View.GONE);
                         geoffim.setVisibility(View.VISIBLE);
                         prizeLabel.setVisibility(View.VISIBLE);
                         prizeLabel.setText("Prize: Geoff Head Badge!");
-                        geoffscore++;
+                        arr[4]++;
+                        //geoffp.setVisibility(View.GONE);
+                        //dataIntent.putExtra("geoffscore", 1);
+                        //geoffscore++;
+                        //geoffnum.setText(geoffscore++);
                         break;
                 }
             }
@@ -145,8 +202,8 @@ public class StartPage extends MainActivity {
 
     public void newFile() {
         timer.cancel();
-        Intent intent = new Intent(StartPage.this, MainActivity.class);
-        startActivity(intent);
+        dataIntent.putExtra("array", arr);
+        startActivity(dataIntent);
         finish();
     }
 

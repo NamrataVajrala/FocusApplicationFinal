@@ -53,7 +53,7 @@
         <ImageView
             android:id="@+id/xyzimage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="346dp"
             android:layout_weight="1"
             android:contentDescription="@string/xyzimg"
             android:visibility="gone"
@@ -62,7 +62,7 @@
         <ImageView
             android:id="@+id/chuchuimage"
             android:layout_width="match_parent"
-            android:layout_height="471dp"
+            android:layout_height="351dp"
             android:layout_weight="1"
             android:contentDescription="@string/chuchuimg"
             android:visibility="gone"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@string/benimg"
-            android:visibility="visible"
+            android:visibility="gone"
             app:srcCompat="@drawable/bennordick" />
 
         <ImageView
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@string/csimg"
-            android:visibility="gone"
+            android:visibility="visible"
             app:srcCompat="@drawable/csbadge" />
 
         <TextView

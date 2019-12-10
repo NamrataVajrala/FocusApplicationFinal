@@ -28,11 +28,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="ACHIEVEMENTS"
-                android:textSize="42sp" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="42sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/xlay"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_weight="1"
@@ -40,19 +44,20 @@
 
             <ImageView
                 android:id="@+id/cspic"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
+                android:layout_width="126dp"
+                android:layout_height="83dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/picfour"
                 app:srcCompat="@drawable/csbadge" />
 
             <TextView
                 android:id="@+id/csCount"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="30 minutes: CS 125 Badge"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -64,8 +69,8 @@
 
             <ImageView
                 android:id="@+id/catpic"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
+                android:layout_width="18dp"
+                android:layout_height="90dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/picthree"
                 app:srcCompat="@drawable/xyz" />
@@ -75,8 +80,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="45 min: xyz cat"
+                android:textSize="28sp" />
 
         </LinearLayout>
 
@@ -88,19 +93,19 @@
 
             <ImageView
                 android:id="@+id/dogpic"
-                android:layout_width="150dp"
+                android:layout_width="122dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/pictwo"
                 app:srcCompat="@drawable/chuchu" />
 
             <TextView
-                android:id="@+id/DogCount"
+                android:id="@+id/dogCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="An hour: Chuchu Dog"
+                android:textSize="28sp" />
 
         </LinearLayout>
 
@@ -112,8 +117,8 @@
 
             <ImageView
                 android:id="@+id/benpic"
-                android:layout_width="150dp"
-                android:layout_height="130dp"
+                android:layout_width="201dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/picg"
                 app:srcCompat="@drawable/bennordick" />
@@ -123,8 +128,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="An hour thirty min: Ben's praise"
+                android:textSize="28sp" />
 
         </LinearLayout>
 
@@ -136,8 +141,8 @@
 
             <ImageView
                 android:id="@+id/geoffpic"
-                android:layout_width="147dp"
-                android:layout_height="150dp"
+                android:layout_width="203dp"
+                android:layout_height="119dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/geoffpic"
                 app:srcCompat="@drawable/geoff" />
@@ -147,8 +152,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="40sp" />
+                android:text="Two hours: Geoff's Big Smile"
+                android:textSize="28sp" />
 
         </LinearLayout>
 
@@ -164,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/main_page"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
     </LinearLayout>
