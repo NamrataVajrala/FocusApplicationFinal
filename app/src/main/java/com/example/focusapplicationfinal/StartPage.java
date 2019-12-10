@@ -116,7 +116,7 @@ public class StartPage extends AppCompatActivity {
                 totalTime = 5400000;
                 break;
             case 4:
-                //totalTime = 7200000;
+                //totalTime = 7200000; 
                 totalTime = 7200000;
                 break;
         }
