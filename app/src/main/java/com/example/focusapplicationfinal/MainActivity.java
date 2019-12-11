@@ -18,12 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private int timerStatus;
     private Intent mainIntent;
     private Intent scoreIntent;
-    public int csscore;
-
-    public int xyzscore;
-    public int chuchuscore;
-    public int benscore;
-    public int geoffscore;
 
     private int[] arr = new int[5];
 
@@ -31,15 +25,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mainIntent = new Intent(MainActivity.this, StartPage.class);
-
-        Intent scoreback = getIntent();
-        csscore = scoreback.getIntExtra("csscore",0);
-        System.out.println("scScore back" + csscore);
-
-        xyzscore = scoreback.getIntExtra("xyzscore",0);
-        chuchuscore = scoreback.getIntExtra("chuchuscore",0);
-        benscore = scoreback.getIntExtra("benscore",0);
-        geoffscore = scoreback.getIntExtra("geoffscore",0);
 
         scoreIntent = new Intent(MainActivity.this, DataPage.class);
         setContentView(R.layout.activity_main);
@@ -101,14 +86,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         mainIntent.putExtra("array", arr);
-        try {
-            Intent passed = getIntent();
-            arr = passed.getIntArrayExtra("array");
-            scoreIntent.putExtra("array", arr);
-            arr = getIntent().getIntArrayExtra("array");
-        } catch (Exception e) {
-
-        }
     }
 
     public int getStatus() {
@@ -121,16 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void newFileTwo() {
-        scoreIntent.putExtra("csscore", csscore);
-        scoreIntent.putExtra("xyzscore",xyzscore);
-        scoreIntent.putExtra("chuchuscore",chuchuscore);
-        scoreIntent.putExtra("benscore",benscore);
-        scoreIntent.putExtra("geoffscore",geoffscore);
-        scoreIntent.putExtra("array", arr);
         startActivity(scoreIntent);
         finish();
     }
-//    public Intent getDataIntent() {
-//        return dataIntent;
-//    }
 }
